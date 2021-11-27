@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
+  search: string = '';
   constructor() { }
 
+  submit() {
+    console.log("test")
+    console.log(this.search);
+  }
   ngOnInit(): void {
   }
 

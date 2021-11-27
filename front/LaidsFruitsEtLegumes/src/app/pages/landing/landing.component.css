@@ -38,4 +38,6 @@ button {
   margin-right: 10px;
   border-radius: 25px;
 }
-
+input[type="text"] {
+  padding-left: 25px;
+}
