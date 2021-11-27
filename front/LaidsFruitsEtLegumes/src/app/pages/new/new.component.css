@@ -1,0 +1,72 @@
+.background {
+  background-image: url("src/assets/new.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  margin: auto;
+  margin-top: 85px;
+  border-radius: 25px;
+}
+.mat-button {
+  background-color: saddlebrown;
+}
+.loginForm {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+.emailInput {
+  margin-top: 55px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.input {
+  margin-top: 55px;
+}
+.passwordInput {
+  margin-top: 45px;
+}
+.button {
+  margin-top: 100px;
+}
+.title {
+  text-align: center;
+  padding-top: 80px;
+  font-size: 25px;
+  color: saddlebrown;
+}
+button:hover {
+  background-color: #62310e;
+}
+input {
+  border: solid 2px saddlebrown;
+  border-radius: 25px;
+  height: 35px;
+  width: 250px;
+}
+input[type="text"], input[type="password"] {
+  padding-left: 15px;
+}
+input:focus-within {
+  border: 2px solid green;
+  outline: none;
+}
+.error {
+  text-align: center;
+  color: red;
+  margin: 25px;
+}
+.price {
+  width: 30%;
+}
+.quantity {
+  width: 30%;
+}

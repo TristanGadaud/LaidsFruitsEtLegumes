@@ -41,6 +41,10 @@ export class ApiService {
     });
   }
   getOrdersBySellerId(id: any) {
-    return this.http.get(this.apiBase + 'api/product?seller_id=' + id, this.httpOptions)
+    return this.http.get(this.apiBase + 'api/product?seller_id=' + id, this.httpOptions);
+  }
+  postOrder(itemName: string, quantity: number, price: number, description: string) {
+    const body = JSON.stringify({title: itemName, price: price, in_stock: quantity, description: description});
+    return this.http.post(this.apiBase + 'api/product/order', body, this.httpOptions);
   }
 }

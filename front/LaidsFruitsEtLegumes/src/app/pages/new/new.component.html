@@ -1,1 +1,22 @@
-<p>new works!</p>
+<div class="background">
+  <div class="wrapper">
+    <div class="title">Ajouter un produit à la vente</div>
+    <div class="error">
+
+    </div>
+    <form class="loginForm" name="loginFrom" ngForm="">
+      <input type="text" class="emailInput" autocomplete="off" name="name" placeholder="Nom du produit">
+      <div class="flex">
+        <input type="text" class="price input" autocomplete="off" name="password" placeholder="€ / kg">
+        <input type="text" class="quantity input" autocomplete="off" name="password" placeholder="quantité">
+      </div>
+      <input type="text" class="emailInput" autocomplete="off" name="name" placeholder="Description">
+      <mat-card-actions class="icon">
+        <button mat-button class="button">
+          Ajouter le produit
+        </button>
+      </mat-card-actions>
+      <input type="submit" style="visibility: hidden">
+    </form>
+  </div>
+</div>

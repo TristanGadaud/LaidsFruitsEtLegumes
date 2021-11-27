@@ -91,3 +91,6 @@ img {
 .link:hover {
   text-decoration: none;
 }
+.avatar:hover {
+  cursor: pointer;
+}
