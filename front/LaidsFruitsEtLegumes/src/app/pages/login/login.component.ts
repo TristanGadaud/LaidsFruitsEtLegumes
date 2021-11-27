@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
 import { CookieService } from "ngx-cookie-service";
-import {Subscription} from "rxjs";
 import {Router} from "@angular/router";
 
 @Component({
@@ -14,7 +13,7 @@ export class LoginComponent implements OnInit {
   email: string = ''
   password: string = ''
   already: boolean = false
-  token: string = ''
+  error: string = ''
   constructor(private Api: ApiService, private cookie: CookieService, private router: Router) { }
 
   ngOnInit(): void {
@@ -28,7 +27,8 @@ export class LoginComponent implements OnInit {
           location.reload()
         });
       }
-
+    }, () => {
+      this.error = "Mot de passe ou email erroné"
     })
   }
 

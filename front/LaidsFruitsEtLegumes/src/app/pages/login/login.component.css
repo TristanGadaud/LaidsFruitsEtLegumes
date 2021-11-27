@@ -54,3 +54,8 @@ input:focus-within {
   border: 2px solid green;
   outline: none;
 }
+.error {
+  text-align: center;
+  color: red;
+  margin: 25px;
+}

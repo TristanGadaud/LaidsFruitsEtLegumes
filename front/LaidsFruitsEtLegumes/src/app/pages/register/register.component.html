@@ -18,6 +18,9 @@
       </div>
     </form>
     <form *ngIf="!formDisplay && formBuyerDisplay" class="buyerForm" autocomplete="off" name="buyerForm" id="buyerForm" ngForm="buyerForm" (ngSubmit)="register()">
+      <div class="error">
+        {{error}}
+      </div>
       <a class="retourl" (click)="back()">
         <mat-icon>keyboard_backspace</mat-icon>
         <span class="back">Retour</span>
@@ -38,6 +41,9 @@
     </form>
 
     <form *ngIf="!formDisplay && formSellerDisplay" class="sellerForm" autocomplete="off" name="sellerForm" id="sellerForm" ngForm="sellerForm" (ngSubmit)="register()">
+      <div class="error">
+        {{error}}
+      </div>
       <a class="retourl" (click)="back()">
         <mat-icon>keyboard_backspace</mat-icon>
         <span class="back">Retour</span>

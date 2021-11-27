@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import { ApiService } from "../../services/api.service";
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private Api: ApiService) { }
+  constructor(private Api: ApiService, private router: Router) { }
 
   formDisplay: boolean = true;
   formBuyerDisplay: boolean = false;
@@ -23,6 +24,7 @@ export class RegisterComponent implements OnInit {
   email: string = '';
   password: string = '';
 
+  error: string = '';
 
   ngOnInit(): void {
   }
@@ -45,7 +47,11 @@ export class RegisterComponent implements OnInit {
 
   register() {
     console.log(this.email, this.password, this.firstname, this.lastname, this.address, this.city, this.buyerOrSeller)
-    this.Api.register(this.firstname, this.lastname, this.companyName, this.buyerOrSeller, this.address, this.city, this.email, this.password)
+    this.Api.register(this.firstname, this.lastname, this.companyName, this.buyerOrSeller, this.address, this.city, this.email, this.password).subscribe(data => {
+      this.router.navigate(['/'])
+      }, () => {
+      this.error = "L'utilisateur existe déjà";
+    })
   }
 
 }

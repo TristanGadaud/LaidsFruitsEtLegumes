@@ -99,3 +99,7 @@ input:focus-within {
 a {
   cursor: pointer;
 }
+.error {
+  padding-top: 25px;
+  color: red;
+}
