@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'notre-philosophie', component: PhilosophieComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile/:id', component: ProfileComponent },
   { path: 'search', component: SearchComponent },
 ];
 

@@ -2,33 +2,61 @@
   <div class="wrapper">
     <div class="title">Enregistrement</div>
 
-
-    <form *ngIf="formDisplay">
-      Vous êtes :
-      <input type="checkbox" name="acheteur">
-      <input type="checkbox" id="acheteur" name="acheteur">
-      <label for="acheteur">Acheteur</label>
+    <form *ngIf="formDisplay" class="checkbox">
+      <div class="ttl t">Vous êtes:</div>
+      <div class="checkboxs">
+        <span class="abs">
+          Acheteur
+        </span>
+        <input type="checkbox" id="acheteur" name="acheteur" (click)="onBuyerDisplayClick()">
+      </div>
+      <div class="checkboxs">
+        <span class="abs">
+          Vendeur
+        </span>
+        <input type="checkbox" id="vendeur" name="vendeur" (click)="onSellerDisplayClick()">
+      </div>
     </form>
-    <form *ngIf="!formDisplay && formBuyerDisplay" class="buyerForm" name="buyerForm"  ngForm="buyerForm">
+    <form *ngIf="!formDisplay && formBuyerDisplay" class="buyerForm" autocomplete="off" name="buyerForm" id="buyerForm" ngForm="buyerForm" (ngSubmit)="register()">
+      <a class="retourl" (click)="back()">
+        <mat-icon>keyboard_backspace</mat-icon>
+        <span class="back">Retour</span>
+      </a>
+      <input autocomplete="false" name="hidden" type="text" style="display:none;">
       <input type="text" class="emailInput t" autocomplete="off" name="firstname" placeholder="Prénom" [(ngModel)]="firstname">
       <input type="text" class="emailInput" autocomplete="off" name="lastname" placeholder="Nom" [(ngModel)]="lastname">
       <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Email" [(ngModel)]="email">
       <input type="password" class="emailInput" autocomplete="off" name="password" placeholder="Mot de passe" [(ngModel)]="password">
+      <div class="center">
+        <mat-card-actions class="icon">
+          <button mat-button class="button">
+            S'enregistrer
+          </button>
+        </mat-card-actions>
+      </div>
+      <input type="submit" style="visibility: hidden">
     </form>
 
-    <form *ngIf="!formDisplay && formSellerDisplay" class="sellerForm" name="sellerForm"  ngForm="sellerForm">
+    <form *ngIf="!formDisplay && formSellerDisplay" class="sellerForm" autocomplete="off" name="sellerForm" id="sellerForm" ngForm="sellerForm" (ngSubmit)="register()">
+      <a class="retourl" (click)="back()">
+        <mat-icon>keyboard_backspace</mat-icon>
+        <span class="back">Retour</span>
+      </a>
+      <input autocomplete="false" name="hidden" type="text" style="display:none;">
       <input type="text" class="emailInput t" autocomplete="off" name="firstname" placeholder="Prénom" [(ngModel)]="firstname">
       <input type="text" class="emailInput" autocomplete="off" name="lastname" placeholder="Nom" [(ngModel)]="lastname">
       <input type="text" class="emailInput" autocomplete="off" name="city" placeholder="Nom de la ferme" [(ngModel)]="companyName">
       <input type="text" class="emailInput" autocomplete="off" name="address" placeholder="Adresse" [(ngModel)]="address">
-      <input type="text" class="emailInput" autocomplete="off" name="city" placeholder="Adresse" [(ngModel)]="city">
+      <input type="text" class="emailInput" autocomplete="off" name="city" placeholder="Ville" [(ngModel)]="city">
       <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Email" [(ngModel)]="email">
       <input type="password" class="emailInput" autocomplete="off" name="password" placeholder="Mot de passe" [(ngModel)]="password">
-      <mat-card-actions class="icon">
-        <button mat-button class="button">
-          S'enregistrer
-        </button>
-      </mat-card-actions>
+      <div class="center">
+        <mat-card-actions class="icon">
+          <button mat-button class="button">
+            S'enregistrer
+          </button>
+        </mat-card-actions>
+      </div>
       <input type="submit" style="visibility: hidden">
     </form>
   </div>

@@ -1,0 +1,30 @@
+.profile {
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  width: 90%;
+  height: 280px;
+  background-color: #62310e;
+  text-align: center;
+}
+.products {
+  margin: auto;
+  margin-top: 35px;
+  width: 90%;
+  height: 100px;
+  background-color: green;
+}
+.center {
+  text-align: center;
+}
+.avatar {
+  border-radius: 50%;
+  margin-top: 35px;
+  margin-left: 25px;
+}
+.picture {
+  text-align: left;
+}
+.infos {
+  width: 100%;
+}

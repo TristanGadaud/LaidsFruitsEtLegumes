@@ -27,7 +27,24 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  back(){
+    this.formSellerDisplay = false;
+    this.formBuyerDisplay = false;
+    this.formDisplay = true;
+  }
+  onBuyerDisplayClick(){
+    this.formDisplay = false
+    this.formBuyerDisplay = true
+    this.buyerOrSeller = "buyer"
+  }
+  onSellerDisplayClick(){
+    this.formDisplay = false
+    this.formSellerDisplay = true
+    this.buyerOrSeller = "seller"
+  }
+
   register() {
+    console.log(this.email, this.password, this.firstname, this.lastname, this.address, this.city, this.buyerOrSeller)
     this.Api.register(this.firstname, this.lastname, this.companyName, this.buyerOrSeller, this.address, this.city, this.email, this.password)
   }
 
