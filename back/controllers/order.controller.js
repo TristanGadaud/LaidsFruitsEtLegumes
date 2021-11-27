@@ -40,11 +40,13 @@ export async function createOrder(req, res) {
     }
 
     try {
-        collection.insertOne(newOrder)
+        collection.insertOne(newOrder);
+        db.collection("products").updateOne({'_id': new ObjectId(product_id)},  { $set: { in_stock: data.in_stock - quantity } })
     }
     catch (err) {
         console.log("Error during insertion of a new order")
         res.status(500).send({ message: "Error during insertion of a new order" })
     }
+
     res.status(200).send({ message: "New order added successfully" });
 }
