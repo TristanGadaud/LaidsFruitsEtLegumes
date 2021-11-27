@@ -1,1 +1,14 @@
-<p>login works!</p>
+<div class="background">
+  <div class="wrapper">
+    <form class="loginForm" name="loginFrom" (submit)="submit()">
+      <input type="text" class="emailInput" placeholder="Email" name="email" [(ngModel)]="email">
+      <input type="text" class="passwordInput" placeholder="Mot de passe" name="password" [(ngModel)]="password">
+      <mat-card-actions class="icon">
+        <button mat-button (click)="submit()" class="button">
+          Se connecter
+        </button>
+      </mat-card-actions>
+      <input type="submit" style="visibility: hidden">
+    </form>
+  </div>
+</div>

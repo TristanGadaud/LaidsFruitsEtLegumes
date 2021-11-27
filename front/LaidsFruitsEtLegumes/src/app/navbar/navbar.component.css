@@ -46,6 +46,10 @@ img {
   height: 3px;
   background-color: green;
 }
+.mat-toolbar.mat-primary {
+  background: white;
+  color: white;
+}
 @media (max-width: 700px) {
   .mat-toolbar-row, .mat-toolbar-single-row {
     flex-direction: column;

@@ -1,0 +1,35 @@
+.background {
+  background-image: url("src/assets/register.jpg");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper {
+  width: 350px;
+  height: 500px;
+  background-color: white;
+  margin: auto;
+  margin-top: 85px;
+  border-radius: 25px;
+  opacity: 0.8;
+}
+.mat-button {
+  background-color: saddlebrown;
+}
+.loginForm {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+}
+.emailInput {
+  margin-top: 45px;
+}
+.passwordInput {
+  margin-top: 45px;
+}
+.button {
+  margin-top: 200px;
+}

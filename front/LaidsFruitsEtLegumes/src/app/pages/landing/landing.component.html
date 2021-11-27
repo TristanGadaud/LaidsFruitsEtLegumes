@@ -5,9 +5,9 @@
         <mat-icon>search</mat-icon>
       </button>
     </mat-card-actions>
-    <form class="inp" id="form" name="form" (submit)="search">
+    <form class="inp" id="form" name="form" (submit)="submit()">
       <input type="text" class="inputText" placeholder="Paris, Angoulême..." name="search" [(ngModel)]="search">
-      <input type="submit" style="position: absolute; left: -9999px"/>
+      <input type="submit" style=" visibility: hidden;"/>
     </form>
   </div>
 </div>

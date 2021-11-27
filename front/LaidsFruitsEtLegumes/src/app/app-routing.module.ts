@@ -5,9 +5,11 @@ import { LoginComponent } from "./pages/login/login.component";
 import { RegisterComponent } from "./pages/register/register.component";
 import { SearchComponent } from "./pages/search/search.component";
 import { ProfileComponent} from "./pages/profile/profile.component";
+import { PhilosophieComponent } from "./philosophie/philosophie.component";
 
 const routes: Routes = [
-  { path: '', component: LandingComponent},
+  { path: '', component: LandingComponent },
+  { path: 'notre-philosophie', component: PhilosophieComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
