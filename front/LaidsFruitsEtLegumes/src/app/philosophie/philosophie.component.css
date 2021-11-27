@@ -66,22 +66,6 @@
   text-align: center;
 }
 
-ul {
-  list-style: none;
-  padding-inline-start: 0;
-}
-ul li:before {
-  content: '✓ ';
-  color: wheat;
-}
-
-.wh {
-  ul li:before {
-    content: '✓ ';
-    color: wheat;
-  }
-}
-
 @media (max-width: 600px) {
   .wrapper {
     display: grid;
