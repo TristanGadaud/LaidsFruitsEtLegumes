@@ -1,0 +1,41 @@
+.background {
+  background-image: url("src/assets/landing.png");
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.form {
+  text-align: center;
+  margin: 15%;
+}
+input {
+  width: 50%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  font-size: 20px;
+}
+input:focus-within {
+  outline: 5px solid saddlebrown;
+}
+.icon {
+  display: inline-block;
+}
+.inp {
+  display: inline;
+}
+
+.mat-icon {
+  color: white;
+}
+button {
+  background-color: chocolate;
+  height: 60px;
+  width: 50px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+

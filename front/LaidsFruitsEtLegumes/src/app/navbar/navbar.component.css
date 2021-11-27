@@ -32,8 +32,8 @@ a:hover {
 }
 
 .mat-primary {
-  background: var(--transparent);
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 img {
@@ -41,7 +41,11 @@ img {
   height:auto;
   margin-top: 15px;
 }
-
+.shadow {
+  width: 100%;
+  height: 3px;
+  background-color: green;
+}
 @media (max-width: 700px) {
   .mat-toolbar-row, .mat-toolbar-single-row {
     flex-direction: column;
