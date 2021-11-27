@@ -1,5 +1,7 @@
 import { authRoutes } from './routes/auth.routes.js';
 import { userRoutes } from './routes/user.routes.js';
+import { productRoutes } from './routes/products.routes.js';
+import { orderRoutes } from './routes/order.routes.js';
 import express from 'express';
 
 import {MongoClient} from "mongodb";
@@ -11,7 +13,10 @@ const port = 3000
 
 app.use(express.json());
 app.use('/api/auth', authRoutes);
-app.use('/api/user', userRoutes)
+app.use('/api/user', userRoutes);
+app.use('/api/product', productRoutes)
+app.use('/api/order', orderRoutes)
+
 
 app.get('/', async (req, res) => {
   res.send({message: "LaidsFruitsEtLegumes back-end :)"})
