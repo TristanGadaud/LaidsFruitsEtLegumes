@@ -27,10 +27,10 @@ export async function createOrder(req, res) {
     const collection = db.collection('orders');
 
     let newOrder = {
-        "buyer_id": user._id,
+        "buyer_id": new ObjectId(user._id),
         "buyer_firstname": user.firstname,
         "buyer_lastname": user.lastname,
-        "seller_id": seller_id,
+        "seller_id": new ObjectId(seller_id),
         "seller_firstname": seller_firstname,
         "seller_lastname": seller_lastname,
         "title": title,
@@ -49,4 +49,22 @@ export async function createOrder(req, res) {
     }
 
     res.status(200).send({ message: "New order added successfully" });
+}
+
+export async function getOrders(req, res) {
+    var { order_id, buyer_id, seller_id } = req.body;
+
+    let db = await connectDb();
+    const collection = db.collection('orders');
+    let lookup = {}
+
+    if (order_id)
+        lookup = { '_id': new ObjectId(order_id) }
+    if (buyer_id)
+        lookup = { 'buyer_id': new ObjectId(buyer_id) }
+    if (seller_id)
+        lookup = { 'seller_id': new ObjectId(seller_id) }
+
+    let data = await collection.find(lookup).toArray()
+    return res.send({data: data})
 }
