@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from "../../services/api.service";
 
 @Component({
   selector: 'app-login',
@@ -9,13 +10,16 @@ export class LoginComponent implements OnInit {
 
   email: string = ''
   password: string = ''
-  constructor() { }
+  already: boolean = false
+  constructor(private Api: ApiService) { }
 
   ngOnInit(): void {
   }
 
   submit() {
-    console.log(this.email, this.password)
+    if (!this.already)
+      this.Api.login(this.email, this.password)
+    this.already = true
   }
 
 }

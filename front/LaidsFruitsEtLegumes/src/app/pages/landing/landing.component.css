@@ -9,7 +9,7 @@
 
 .form {
   text-align: center;
-  margin: 15%;
+  margin: 5%;
 }
 input {
   width: 50%;
@@ -40,4 +40,9 @@ button {
 }
 input[type="text"] {
   padding-left: 25px;
+}
+
+.titre {
+  text-align: center;
+  max-height: 400px;
 }

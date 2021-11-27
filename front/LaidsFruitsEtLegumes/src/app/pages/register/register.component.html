@@ -1,1 +1,35 @@
-<p>register works!</p>
+<div class="background">
+  <div class="wrapper">
+    <div class="title">Enregistrement</div>
+
+
+    <form *ngIf="formDisplay">
+      Vous êtes :
+      <input type="checkbox" name="acheteur">
+      <input type="checkbox" id="acheteur" name="acheteur">
+      <label for="acheteur">Acheteur</label>
+    </form>
+    <form *ngIf="!formDisplay && formBuyerDisplay" class="buyerForm" name="buyerForm"  ngForm="buyerForm">
+      <input type="text" class="emailInput t" autocomplete="off" name="firstname" placeholder="Prénom" [(ngModel)]="firstname">
+      <input type="text" class="emailInput" autocomplete="off" name="lastname" placeholder="Nom" [(ngModel)]="lastname">
+      <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Email" [(ngModel)]="email">
+      <input type="password" class="emailInput" autocomplete="off" name="password" placeholder="Mot de passe" [(ngModel)]="password">
+    </form>
+
+    <form *ngIf="!formDisplay && formSellerDisplay" class="sellerForm" name="sellerForm"  ngForm="sellerForm">
+      <input type="text" class="emailInput t" autocomplete="off" name="firstname" placeholder="Prénom" [(ngModel)]="firstname">
+      <input type="text" class="emailInput" autocomplete="off" name="lastname" placeholder="Nom" [(ngModel)]="lastname">
+      <input type="text" class="emailInput" autocomplete="off" name="city" placeholder="Nom de la ferme" [(ngModel)]="companyName">
+      <input type="text" class="emailInput" autocomplete="off" name="address" placeholder="Adresse" [(ngModel)]="address">
+      <input type="text" class="emailInput" autocomplete="off" name="city" placeholder="Adresse" [(ngModel)]="city">
+      <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Email" [(ngModel)]="email">
+      <input type="password" class="emailInput" autocomplete="off" name="password" placeholder="Mot de passe" [(ngModel)]="password">
+      <mat-card-actions class="icon">
+        <button mat-button class="button">
+          S'enregistrer
+        </button>
+      </mat-card-actions>
+      <input type="submit" style="visibility: hidden">
+    </form>
+  </div>
+</div>

@@ -5,7 +5,7 @@ import { LoginComponent } from "./pages/login/login.component";
 import { RegisterComponent } from "./pages/register/register.component";
 import { SearchComponent } from "./pages/search/search.component";
 import { ProfileComponent} from "./pages/profile/profile.component";
-import { PhilosophieComponent } from "./philosophie/philosophie.component";
+import { PhilosophieComponent } from "./pages/philosophie/philosophie.component";
 
 const routes: Routes = [
   { path: '', component: LandingComponent },

@@ -1,8 +1,9 @@
 <div class="background">
   <div class="wrapper">
-    <form class="loginForm" name="loginFrom" (submit)="submit()">
-      <input type="text" class="emailInput" placeholder="Email" name="email" [(ngModel)]="email">
-      <input type="text" class="passwordInput" placeholder="Mot de passe" name="password" [(ngModel)]="password">
+    <div class="title">Connexion</div>
+    <form class="loginForm" name="loginFrom" (ngSubmit)="submit()" ngForm="">
+      <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Email" [(ngModel)]="email">
+      <input type="password" class="passwordInput" autocomplete="off" name="password" placeholder="Mot de passe" [(ngModel)]="password">
       <mat-card-actions class="icon">
         <button mat-button (click)="submit()" class="button">
           Se connecter

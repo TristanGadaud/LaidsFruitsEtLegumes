@@ -11,16 +11,17 @@ import { ProfileComponent } from './pages/profile/profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatAutocompleteModule} from "@angular/material/autocomplete";
-import {MatOptionModule} from "@angular/material/core";
-import {MatCardModule} from "@angular/material/card";
-import {MatIconModule} from "@angular/material/icon";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatInputModule} from "@angular/material/input";
-import {MatButtonModule} from "@angular/material/button";
-import { PhilosophieComponent } from './philosophie/philosophie.component';
+import { MatToolbarModule} from "@angular/material/toolbar";
+import { MatFormFieldModule} from "@angular/material/form-field";
+import { MatAutocompleteModule} from "@angular/material/autocomplete";
+import { MatOptionModule} from "@angular/material/core";
+import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MatInputModule } from "@angular/material/input";
+import { MatButtonModule } from "@angular/material/button";
+import {  PhilosophieComponent } from './pages/philosophie/philosophie.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PhilosophieComponent } from './philosophie/philosophie.component';
         FormsModule,
         ReactiveFormsModule,
         MatInputModule,
-        MatButtonModule
+        MatButtonModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

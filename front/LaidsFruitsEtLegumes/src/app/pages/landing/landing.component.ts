@@ -11,7 +11,6 @@ export class LandingComponent implements OnInit {
   constructor() { }
 
   submit() {
-    console.log("test")
     console.log(this.search);
   }
   ngOnInit(): void {

@@ -14,7 +14,6 @@
   margin: auto;
   margin-top: 85px;
   border-radius: 25px;
-  opacity: 0.8;
 }
 .mat-button {
   background-color: saddlebrown;
@@ -25,11 +24,33 @@
   justify-content: center;
 }
 .emailInput {
-  margin-top: 45px;
+  margin-top: 55px;
 }
 .passwordInput {
   margin-top: 45px;
 }
 .button {
-  margin-top: 200px;
+  margin-top: 100px;
+}
+.title {
+  text-align: center;
+  padding-top: 80px;
+  font-size: 45px;
+  color: saddlebrown;
+}
+button:hover {
+  background-color: #62310e;
+}
+input {
+  border: solid 2px saddlebrown;
+  border-radius: 25px;
+  height: 35px;
+  width: 250px;
+}
+input[type="text"], input[type="password"] {
+  padding-left: 15px;
+}
+input:focus-within {
+  border: 2px solid green;
+  outline: none;
 }
