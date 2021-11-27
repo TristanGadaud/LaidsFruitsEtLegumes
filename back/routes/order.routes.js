@@ -1,7 +1,8 @@
 import { Router } from 'express';
 import { getUser } from '../middleware/getUser.js';
+import { jwtVerify } from '../middleware/authJwt.js';
 import { createOrder } from '../controllers/order.controller.js';
 
 export const orderRoutes = Router();
 
-orderRoutes.post('/', createOrder);
+orderRoutes.post('/', jwtVerify, getUser, createOrder);
