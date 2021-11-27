@@ -21,6 +21,7 @@
   border-radius: 50%;
   margin-top: 35px;
   margin-left: 25px;
+  max-width: 200px;
 }
 .picture {
   text-align: left;
@@ -28,4 +29,32 @@
 .infos {
   width: 100%;
   margin-top: 100px;
+}
+.lastName {
+  font-size: 45px;
+}
+.address {
+  margin-top: 25px;
+}
+.products {
+  display: flex;
+}
+.productImage {
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+}
+.description {
+  width: 100%;
+  text-align: center;
+}
+
+.productTitle {
+  margin-top: 15px;
+  font-size: 35px;
+}
+
+.firstNameProduct {
+  margin-top: 15px;
+  font-size: 15px;
 }

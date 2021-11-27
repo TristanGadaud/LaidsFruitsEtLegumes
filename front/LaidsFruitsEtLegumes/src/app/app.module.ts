@@ -22,6 +22,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatButtonModule } from "@angular/material/button";
 import {  PhilosophieComponent } from './pages/philosophie/philosophie.component';
 import { HttpClientModule } from "@angular/common/http";
+import { NewComponent } from './pages/new/new.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { HttpClientModule } from "@angular/common/http";
     ProfileComponent,
     NavbarComponent,
     FooterComponent,
-    PhilosophieComponent
+    PhilosophieComponent,
+    NewComponent
   ],
     imports: [
         BrowserModule,

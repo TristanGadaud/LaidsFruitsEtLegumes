@@ -1,21 +1,37 @@
 <div class="center">
   <div class="profile">
     <div class="picture">
-      <img src="assets/avatar.png" alt="avatar" class="avatar">
+      <img *ngIf="seller" src="assets/avatar.png" alt="avatar" class="avatar">
+      <img *ngIf="!seller" src="assets/avatar2.png" alt="avatar" class="avatar">
     </div>
     <div class="infos">
       <div class="ferme">
-        <div class="fermeSpan">
-          <mat-icon>home</mat-icon>
+        <div class="lastName">
+          {{firstname}} {{lastname}}
         </div>
-        <div class="address">
-          17 rue des tournesols
+        <div *ngIf="seller" class="address">
+          {{companyName}}
+        </div>
+        <div *ngIf="seller" class="address">
+          {{address}}, {{city}}
         </div>
       </div>
-      <div class="tags">Viende bovine Viande</div>
     </div>
   </div>
-  <div class="products">
 
+  <div *ngFor="let product of products" class="products">
+    <div class="productImage">
+      <img [src]="product.pic_url" class="productImage" alt="img">
+    </div>
+    <div class="description">
+      <div class="productTitle">
+        {{product.title}}
+      </div>
+      <div class="seller">
+        <div class="firstNameProduct">
+          {{product.seller_firstname}} {{product.seller_lastname}}
+        </div>
+      </div>
+    </div>
   </div>
 </div>

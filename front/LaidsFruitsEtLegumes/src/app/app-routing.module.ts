@@ -6,6 +6,7 @@ import { RegisterComponent } from "./pages/register/register.component";
 import { SearchComponent } from "./pages/search/search.component";
 import { ProfileComponent} from "./pages/profile/profile.component";
 import { PhilosophieComponent } from "./pages/philosophie/philosophie.component";
+import { NewComponent } from "./pages/new/new.component";
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'search', component: SearchComponent },
+  { path: 'new', component: NewComponent }
 ];
 
 @NgModule({

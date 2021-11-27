@@ -25,13 +25,22 @@ export class ApiService {
   isLogged() {
     return this.cookie.check('access_token')
   }
-  getNameFromToken() {
-    return this.http.get(this.apiBase + 'api/user')
+  getNameFromToken(token: any) {
+    // @ts-ignore
+    this.httpOptions.headers['Authorization'] = 'Bearer ' + token
+    return this.http.get(this.apiBase + 'api/user', this.httpOptions)
   }
+  getUserById(id: any) {
+    return this.http.get(this.apiBase + 'api/user/getUserById?user_id=' + id, this.httpOptions)
+  }
+
   logout() {
-    this.cookie.delete('access_token')
+    this.cookie.delete('access_token', '/')
     this.router.navigate(['/']).then(() => {
       location.reload()
     });
+  }
+  getOrdersBySellerId(id: any) {
+    return this.http.get(this.apiBase + 'api/product?seller_id=' + id, this.httpOptions)
   }
 }

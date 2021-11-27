@@ -78,9 +78,16 @@ img {
 }
 .avatar {
   border-radius: 50%;
-  width: 50%;
+  width: 45%;
   height: auto;
 }
 .logout {
   font-size: 15px;
+}
+
+.logout:hover {
+  cursor: pointer;
+}
+.link:hover {
+  text-decoration: none;
 }
