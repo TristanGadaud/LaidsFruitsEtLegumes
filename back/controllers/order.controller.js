@@ -5,7 +5,7 @@ import { ObjectId } from "mongodb";
 
 export async function createOrder(req, res) {
     var { user } = res.locals;
-    var { product_id, seller_id, quantity, seller_firstname, seller_lastname, title } = req.body;
+    var { product_id, seller_id, quantity, seller_firstname, seller_lastname, title } = req.query;
     let lookup = {}
 
     let db = await connectDb();
