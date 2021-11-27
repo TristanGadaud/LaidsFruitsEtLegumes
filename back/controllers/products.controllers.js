@@ -20,6 +20,7 @@ async function get_distance(locBuy, locSell) {
     try {
         let req = await axios(config)
         let res = await req.data
+        console.log(res)
         if (res?.rows && res?.rows.length != 0 && res.rows[0]?.elements && res.rows[0]?.elements.length != 0 && res.rows[0]['elements'][0].distance?.value)
             return res.rows[0]['elements'][0].distance.value
         return null
@@ -57,14 +58,14 @@ export async function addProduct(req, res) {
 }
 
 export async function getProducts(req, res) {
-    var { title, product_id, seller_id, location } = req.body;
+    var { title, product_id, seller_id, location } = req.query;
     let db = await connectDb()
     const collection = db.collection('products');
     let data = null
     let lookup = {}
 
     if (title)
-        lookup = { $text: { $search: "courgettes" } }
+        lookup = { $text: { $search: title } }
     if (product_id)
         lookup = { '_id': new ObjectId(product_id) }
     if (seller_id)
