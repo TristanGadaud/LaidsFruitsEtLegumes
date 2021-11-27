@@ -7,7 +7,7 @@ import { getUserByEmail } from "../utilities/connectDb.utilities.js";
 export async function register (req, res) {
     let db = await connectDb()
     const collection = db.collection('users');
-    if (await getUserByEmail != null)
+    if (await getUserByEmail(req.body.email) != null)
         return res.status(500).send({message: "This user already exist."}) 
     req.body.password = bcrypt.hashSync(req.body.password)
     await collection.insertOne(req.body);
