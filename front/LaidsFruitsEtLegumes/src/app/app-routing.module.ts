@@ -7,7 +7,7 @@ import { SearchComponent } from "./pages/search/search.component";
 import { ProfileComponent} from "./pages/profile/profile.component";
 import { PhilosophieComponent } from "./pages/philosophie/philosophie.component";
 import { NewComponent } from "./pages/new/new.component";
-// import { ProductComponent } from './pages/product/product.component';
+import { ProductComponent } from './pages/product/product.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
@@ -16,8 +16,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'search', component: SearchComponent },
-  { path: 'new', component: NewComponent }
-  // { path: 'product/:id', component: ProductComponent}
+  { path: 'new', component: NewComponent },
+  { path: 'product/:product_id', component: ProductComponent}
 ];
 
 @NgModule({
