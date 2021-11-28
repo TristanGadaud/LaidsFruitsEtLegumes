@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from "../../services/api.service";
-import { Router } from "@angular/router";
-
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-search',
@@ -10,18 +9,23 @@ import { Router } from "@angular/router";
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private Api: ApiService) { }
+  constructor(private route: ActivatedRoute, private Api: ApiService) { }
 
-  query: string = '';
-  location: string = '';
-  results: any = [];
   error: string = '';
+  food: string | null = '';
+  localization: string | null = '';
+  products: any
   ngOnInit(): void {
+    this.food = this.route.snapshot.paramMap.get('food');
+    this.localization = this.route.snapshot.paramMap.get('localization');
+    console.log(this.food, this.localization)
+    this.searchProduct()
   }
 
   searchProduct() {
-    // this.query = data.body.datas.query
-    this.Api.searchProduct(this.query, this.location).subscribe(data => {
+    this.Api.searchProduct(this.food, this.localization).subscribe(data => {
+      // @ts-ignore
+      this.products = data.body.data
       console.log(data)
       // @ts-ignore
       this.results = data.body.data

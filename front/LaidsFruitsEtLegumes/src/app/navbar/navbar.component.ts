@@ -17,19 +17,19 @@ export class NavbarComponent implements OnInit {
   seller: boolean = false;
   url: string = ''
   ngOnInit(): void {
-    console.log(this.id)
     this.logged = this.Api.isLogged();
-    this.Api.getNameFromToken(this.cookie.get('access_token')).subscribe(data => {
-      // @ts-ignore
-      this.id = data.body.datas._id;
-      // @ts-ignore
-      this.url = data.body.datas.pic_url;
-      // @ts-ignore
-      if (data.body.datas.type === "seller") {
-        this.seller = true;
-      }
-    })
-
+    if (this.cookie.check('access_token')) {
+      this.Api.getNameFromToken(this.cookie.get('access_token')).subscribe(data => {
+        // @ts-ignore
+        this.id = data.body.datas._id;
+        // @ts-ignore
+        this.url = data.body.datas.pic_url;
+        // @ts-ignore
+        if (data.body.datas.type === "seller") {
+          this.seller = true;
+        }
+      })
+    }
   }
   logout() {
     this.Api.logout()

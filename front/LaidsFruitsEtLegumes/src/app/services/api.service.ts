@@ -47,7 +47,8 @@ export class ApiService {
     const body = JSON.stringify({title: itemName, price: price, in_stock: quantity, description: description, pic_url: pic_url});
     return this.http.post(this.apiBase + 'api/product', body, this.httpOptions);
   }
-  searchProduct(title: string, location: string) {
+
+  searchProduct(title: string | null, location: string | null) {
     return this.http.get(this.apiBase + `api/product?title=${title}&location=${location}`, this.httpOptions)
   }
 }

@@ -7,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  search: string = '';
+  food: string = '';
+  localization: string = '';
   constructor() { }
 
   submit() {
-    console.log(this.search);
+    console.log(this.food, this.localization);
   }
   ngOnInit(): void {
   }

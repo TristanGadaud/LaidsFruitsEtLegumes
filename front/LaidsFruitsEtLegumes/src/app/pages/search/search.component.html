@@ -1,21 +1,105 @@
 <div class="background">
     <div class="wrapper">
-      <div class="title">Search </div>
-      <div class="error">
-        {{error}}
-        {{results}}
+      <div class="title">
+        Vous cherchez '{{food}}' à '{{localization}}' :
       </div>
-      <form class="loginForm" name="loginFrom" (ngSubmit)="searchProduct()" ngForm="">
-        <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Carotte" [(ngModel)]="query">
-        <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Paris" [(ngModel)]="location">
+      <div class="results">
+          <div *ngFor="let product of products" class="product">
+            <div class="img">
+              <img [src]="product.pic_url" class="productImage" alt="image">
+            </div>
+            <div class="infos">
+              <div class="title">{{product.title}}</div>
+              <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+              <div class="quantity">
+                <span class="quantityText">{{product.price}}</span>
+                <span> unités</span></div>
+            </div>
+          </div>
+        <div *ngFor="let product of products" class="product">
+          <div class="img">
+            <img [src]="product.pic_url" class="productImage" alt="image">
+          </div>
+          <div class="infos">
+            <div class="title">{{product.title}}</div>
+            <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+            <div class="quantity">
+              <span class="quantityText">{{product.price}}</span>
+              <span> unités</span></div>
+          </div>
+        </div>
+        <div *ngFor="let product of products" class="product">
+          <div class="img">
+            <img [src]="product.pic_url" class="productImage" alt="image">
+          </div>
+          <div class="infos">
+            <div class="title">{{product.title}}</div>
+            <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+            <div class="quantity">
+              <span class="quantityText">{{product.price}}</span>
+              <span> unités</span></div>
+          </div>
+        </div>
+        <div *ngFor="let product of products" class="product">
+          <div class="img">
+            <img [src]="product.pic_url" class="productImage" alt="image">
+          </div>
+          <div class="infos">
+            <div class="title">{{product.title}}</div>
+            <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+            <div class="quantity">
+              <span class="quantityText">{{product.price}}</span>
+              <span> unités</span></div>
+          </div>
+        </div>
+        <div *ngFor="let product of products" class="product">
+          <div class="img">
+            <img [src]="product.pic_url" class="productImage" alt="image">
+          </div>
+          <div class="infos">
+            <div class="title">{{product.title}}</div>
+            <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+            <div class="quantity">
+              <span class="quantityText">{{product.price}}</span>
+              <span> unités</span></div>
+          </div>
+        </div>
+        <div *ngFor="let product of products" class="product">
+          <div class="img">
+            <img [src]="product.pic_url" class="productImage" alt="image">
+          </div>
+          <div class="infos">
+            <div class="title">{{product.title}}</div>
+            <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+            <div class="quantity">
+              <span class="quantityText">{{product.price}}</span>
+              <span> unités</span></div>
+          </div>
+        </div>
+        <div *ngFor="let product of products" class="product">
+          <div class="img">
+            <img [src]="product.pic_url" class="productImage" alt="image">
+          </div>
+          <div class="infos">
+            <div class="title">{{product.title}}</div>
+            <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+            <div class="quantity">
+              <span class="quantityText">{{product.price}}</span>
+              <span> unités</span></div>
+          </div>
+        </div><div *ngFor="let product of products" class="product">
+        <div class="img">
+          <img [src]="product.pic_url" class="productImage" alt="image">
+        </div>
+        <div class="infos">
+          <div class="title">{{product.title}}</div>
+          <span class="price">{{product.quantity}}</span><span class="priceUnit">€ / kg</span>
+          <div class="quantity">
+            <span class="quantityText">{{product.price}}</span>
+            <span> unités</span></div>
+        </div>
+      </div>
 
-        <mat-card-actions class="icon">
-          <button mat-button class="button">
-            Se connecter
-          </button>
-        </mat-card-actions>
-        <input type="submit" style="visibility: hidden">
-      </form>
+      </div>
     </div>
   </div>
-  

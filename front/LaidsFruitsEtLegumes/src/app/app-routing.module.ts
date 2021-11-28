@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile/:id', component: ProfileComponent },
-  { path: 'search', component: SearchComponent },
+  { path: 'search/:food/:localization', component: SearchComponent },
   { path: 'new', component: NewComponent }
   // { path: 'product/:id', component: ProductComponent}
 ];

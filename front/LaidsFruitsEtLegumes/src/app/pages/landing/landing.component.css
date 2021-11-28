@@ -46,3 +46,6 @@ input[type="text"] {
   text-align: center;
   max-height: 400px;
 }
+.wrapper {
+  text-align: center;
+}

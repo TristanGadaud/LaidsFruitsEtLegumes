@@ -9,8 +9,11 @@
       </button>
     </mat-card-actions>
     <form class="inp" id="form" name="form" (submit)="submit()">
-      <input type="text" class="inputText" name="search" autocomplete="off" placeholder="Paris, Angoulême..." [(ngModel)]="search">
-      <input type="submit" style=" visibility: hidden;"/>
+      <div class="wrapper">
+        <input type="text" class="inputText" name="search" autocomplete="off" placeholder="Carottes, pommes de terre..." [(ngModel)]="food">
+        <input type="text" class="inputText" name="search" autocomplete="off" placeholder="Paris, Angoulême..." [(ngModel)]="localization">
+        <input type="submit" style=" visibility: hidden;"/>
+      </div>
     </form>
   </div>
 </div>
