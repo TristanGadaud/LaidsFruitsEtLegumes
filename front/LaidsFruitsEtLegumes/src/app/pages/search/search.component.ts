@@ -18,7 +18,6 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
     this.food = this.route.snapshot.paramMap.get('food');
     this.localization = this.route.snapshot.paramMap.get('localization');
-    console.log(this.food, this.localization)
     this.searchProduct()
   }
 

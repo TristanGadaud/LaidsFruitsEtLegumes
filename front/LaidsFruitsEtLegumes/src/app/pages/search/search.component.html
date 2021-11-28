@@ -14,7 +14,9 @@
                 <span class="price">{{product.price}}</span><span class="priceUnit">€ / kg</span>
                 <div class="quantity">
                   <span class="quantityText">{{product.in_stock}}</span>
-                  <span> unités</span></div>
+                  <span> kg restants</span></div>
+                <div class="distance">
+                  <span class="distanceText"><b>Distance:</b> {{products.distance !== 0 ? product.distance / 1000 : "NA"}} km</span></div>
               </div>
               </a>
             </div>

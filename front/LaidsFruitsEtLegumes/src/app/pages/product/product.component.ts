@@ -20,7 +20,8 @@ export class ProductComponent implements OnInit {
   seller_location: string = '';
   price: string = '';
   pic_url: string = '';
-  in_stock: string = ';'
+  in_stock: string = '';
+
   ngOnInit(): void {
     this.id = this.route.snapshot.paramMap.get('id')
     this.Api.getProductById(this.id).subscribe(data => {
