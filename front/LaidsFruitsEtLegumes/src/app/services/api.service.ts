@@ -12,7 +12,7 @@ export class ApiService {
 
   apiBase = 'http://104.248.134.123:3000/';
   authCookie = this.cookie.get('access_token');
-  httpOptions = {headers: {'Content-Type': 'application/json'}, observe: 'response' as 'response'};
+  httpOptions = {headers: {'Content-Type': 'application/json', 'Access-Control-Allow-Origin': 'http://104.248.134.123:3000'}, observe: 'response' as 'response'};
   login(email: string, password: string) {
     const body = JSON.stringify({email: email, password: password});
     return this.http.post<any>(this.apiBase + 'api/auth/signin', body, this.httpOptions)
