@@ -23,6 +23,7 @@ import { MatButtonModule } from "@angular/material/button";
 import {  PhilosophieComponent } from './pages/philosophie/philosophie.component';
 import { HttpClientModule } from "@angular/common/http";
 import { NewComponent } from './pages/new/new.component';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NewComponent } from './pages/new/new.component';
     NavbarComponent,
     FooterComponent,
     PhilosophieComponent,
-    NewComponent
+    NewComponent,
+    ProductComponent
   ],
     imports: [
         BrowserModule,

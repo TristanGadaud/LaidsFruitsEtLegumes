@@ -1,1 +1,21 @@
-<p>search works!</p>
+<div class="background">
+    <div class="wrapper">
+      <div class="title">Search </div>
+      <div class="error">
+        {{error}}
+        {{results}}
+      </div>
+      <form class="loginForm" name="loginFrom" (ngSubmit)="searchProduct()" ngForm="">
+        <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Carotte" [(ngModel)]="query">
+        <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Paris" [(ngModel)]="location">
+
+        <mat-card-actions class="icon">
+          <button mat-button class="button">
+            Se connecter
+          </button>
+        </mat-card-actions>
+        <input type="submit" style="visibility: hidden">
+      </form>
+    </div>
+  </div>
+  
