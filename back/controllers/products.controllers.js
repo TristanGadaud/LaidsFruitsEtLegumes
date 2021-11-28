@@ -43,7 +43,7 @@ export async function addProduct(req, res) {
         "seller_location": user.address,
         "title": req.body.title,
         "price": req.body.price,
-        "pic_url": null,
+        "pic_url": req.body.pic_url,
         "in_stock": req.body.in_stock,
         "description": req.body.description,
         "updated_at": Date.now(),
