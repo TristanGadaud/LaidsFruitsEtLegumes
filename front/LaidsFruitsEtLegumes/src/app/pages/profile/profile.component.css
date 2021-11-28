@@ -6,6 +6,8 @@
   height: 280px;
   background-color: #62310e;
   text-align: center;
+  border-radius: 35px;;
+  color: white;
 }
 .products {
   margin: auto;
@@ -13,6 +15,7 @@
   width: 90%;
   height: 100px;
   background-color: green;
+  border-radius: 35px;
 }
 .center {
   text-align: center;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-landing',
@@ -9,11 +10,12 @@ export class LandingComponent implements OnInit {
 
   food: string = '';
   localization: string = '';
-  constructor() { }
+  constructor(private router: Router) { }
 
   submit() {
-    console.log(this.food, this.localization);
+    this.router.navigate(['/search/' + this.food + '/' + this.localization])
   }
+
   ngOnInit(): void {
   }
 
