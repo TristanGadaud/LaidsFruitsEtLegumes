@@ -8,8 +8,7 @@
   <a *ngIf="!logged" routerLink="/notre-philosophie" routerLinkActive="active" class="link">Notre philosophie</a>
   <a *ngIf="!logged" routerLink="/login" routerLinkActive="active" class="link">Se connecter</a>
   <a *ngIf="!logged" routerLink="/register" routerLinkActive="active" class="link">S'enregistrer</a>
-  <a *ngIf="logged && seller" (click)="getToProfile()"><img src="assets/avatar.png" class="avatar" alt="avatar"></a>
-  <a *ngIf="logged && !seller"  (click)="getToProfile()"><img src="assets/avatar2.jpg" class="avatar" alt="avatar"></a>
+  <a *ngIf="logged && url" (click)="getToProfile()"><img [src]="url" class="avatar" alt="avatar"></a>
   <a *ngIf="logged" (click)="logout()" routerLinkActive="active" class="link logout">Se déconnecter</a>
 </mat-toolbar>
 <div class="shadow"></div>

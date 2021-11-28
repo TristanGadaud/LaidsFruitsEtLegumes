@@ -9,7 +9,7 @@
 
 .wrapper {
   width: 350px;
-  height: 500px;
+  height: 680px;
   background-color: white;
   margin: auto;
   margin-top: 85px;
@@ -65,7 +65,7 @@ input:focus-within {
   margin: 25px;
 }
 .price {
-  width: 30%;
+  width: 38%;
 }
 .quantity {
   width: 30%;

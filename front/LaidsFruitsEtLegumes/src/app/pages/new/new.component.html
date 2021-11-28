@@ -4,13 +4,16 @@
     <div class="error">
 
     </div>
-    <form class="loginForm" name="loginFrom" ngForm="">
-      <input type="text" class="emailInput" autocomplete="off" name="name" placeholder="Nom du produit">
+
+
+    <form class="loginForm" name="newFrom" (ngSubmit)="postOrder()" ngForm="">
+      <input type="text" class="emailInput" autocomplete="off" name="title" [(ngModel)]="title" placeholder="Nom du produit">
       <div class="flex">
-        <input type="text" class="price input" autocomplete="off" name="password" placeholder="€ / kg">
-        <input type="text" class="quantity input" autocomplete="off" name="password" placeholder="quantité">
+        <input type="text" class="price input" autocomplete="off" name="price" [(ngModel)]="price" placeholder="€ / kg">
+        <input type="text" class="quantity input" autocomplete="off" name="in_stock" [(ngModel)]="in_stock" placeholder="Quantité">
       </div>
-      <input type="text" class="emailInput" autocomplete="off" name="name" placeholder="Description">
+      <input type="text" class="emailInput" autocomplete="off" name="description" [(ngModel)]="description" placeholder="Description">
+      <input type="text" class="emailInput" autocomplete="off" name="description" [(ngModel)]="pic_url" placeholder="Lien de l'image">
       <mat-card-actions class="icon">
         <button mat-button class="button">
           Ajouter le produit
@@ -18,5 +21,8 @@
       </mat-card-actions>
       <input type="submit" style="visibility: hidden">
     </form>
+
+
+
   </div>
 </div>

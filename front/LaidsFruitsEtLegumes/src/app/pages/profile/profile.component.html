@@ -1,8 +1,7 @@
 <div class="center">
   <div class="profile">
     <div class="picture">
-      <img *ngIf="seller" src="assets/avatar.png" alt="avatar" class="avatar">
-      <img *ngIf="!seller" src="assets/avatar2.png" alt="avatar" class="avatar">
+      <img *ngIf="avatar_url" [src]="avatar_url" alt="avatar" class="avatar">
     </div>
     <div class="infos">
       <div class="ferme">
@@ -13,7 +12,7 @@
           {{companyName}}
         </div>
         <div *ngIf="seller" class="address">
-          {{address}}, {{city}}
+          {{address}}
         </div>
       </div>
     </div>

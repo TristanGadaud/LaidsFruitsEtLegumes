@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
   city: string = '';
   email: string = '';
   password: string = '';
-
+  pic_url: string = '';
   error: string = '';
 
   ngOnInit(): void {
@@ -47,7 +47,7 @@ export class RegisterComponent implements OnInit {
 
   register() {
     console.log(this.email, this.password, this.firstname, this.lastname, this.address, this.city, this.buyerOrSeller)
-    this.Api.register(this.firstname, this.lastname, this.companyName, this.buyerOrSeller, this.address, this.city, this.email, this.password).subscribe(data => {
+    this.Api.register(this.firstname, this.lastname, this.companyName, this.buyerOrSeller, this.address, this.city, this.email, this.password, this.pic_url).subscribe(data => {
       this.router.navigate(['/'])
       }, () => {
       this.error = "L'utilisateur existe déjà";

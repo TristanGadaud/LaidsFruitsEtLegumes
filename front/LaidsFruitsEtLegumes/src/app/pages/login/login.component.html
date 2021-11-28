@@ -4,6 +4,8 @@
     <div class="error">
       {{error}}
     </div>
+
+
     <form class="loginForm" name="loginFrom" (ngSubmit)="submit()" ngForm="">
       <input type="text" class="emailInput" autocomplete="off" name="email" placeholder="Email" [(ngModel)]="email">
       <input type="password" class="passwordInput" autocomplete="off" name="password" placeholder="Mot de passe" [(ngModel)]="password">
@@ -14,5 +16,10 @@
       </mat-card-actions>
       <input type="submit" style="visibility: hidden">
     </form>
+
+
+
+
+
   </div>
 </div>

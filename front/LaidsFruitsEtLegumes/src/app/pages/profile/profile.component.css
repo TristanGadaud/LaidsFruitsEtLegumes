@@ -40,7 +40,9 @@
   display: flex;
 }
 .productImage {
-  width: 150px;
+  margin: 5px;
+  width: 80px;
+  max-height: 80px;
   height: auto;
   border-radius: 50%;
 }

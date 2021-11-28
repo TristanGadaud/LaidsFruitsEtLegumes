@@ -17,9 +17,9 @@ export class ApiService {
     const body = JSON.stringify({email: email, password: password});
     return this.http.post<any>(this.apiBase + 'api/auth/signin', body, this.httpOptions)
   }
-  register(firstname: string, lastname: string, companyName: string, buyerOrSeller: string, address: string, city: string, email: string, password: string) {
+  register(firstname: string, lastname: string, companyName: string, buyerOrSeller: string, address: string, city: string, email: string, password: string, pic_url: string) {
     const body = JSON.stringify({firstname: firstname, lastname: lastname, companyName: companyName, type: buyerOrSeller, address: address,
-      city: city, email: email, password: password});
+      city: city, email: email, password: password, pic_url: pic_url});
     return this.http.post<any>(this.apiBase + 'api/auth/signup', body, this.httpOptions)
   }
   isLogged() {
@@ -43,8 +43,8 @@ export class ApiService {
   getOrdersBySellerId(id: any) {
     return this.http.get(this.apiBase + 'api/product?seller_id=' + id, this.httpOptions);
   }
-  postOrder(itemName: string, quantity: number, price: number, description: string) {
-    const body = JSON.stringify({title: itemName, price: price, in_stock: quantity, description: description});
-    return this.http.post(this.apiBase + 'api/product/order', body, this.httpOptions);
+  postOrder(itemName: string, quantity: number, price: number, description: string, pic_url: string) {
+    const body = JSON.stringify({title: itemName, price: price, in_stock: quantity, description: description, pic_url: pic_url});
+    return this.http.post(this.apiBase + 'api/product', body, this.httpOptions);
   }
 }

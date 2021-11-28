@@ -14,12 +14,12 @@ export class ProfileComponent implements OnInit {
 
   id: string | null = '';
   address: string = ''
-  city: string = ''
   companyName: string = ''
   firstname: string = ''
   lastname: string = ''
   type: string = ''
   idName: string = ''
+  avatar_url: string = ''
   seller: boolean = false
   products: any = []
   ngOnInit(): void {
@@ -31,9 +31,9 @@ export class ProfileComponent implements OnInit {
       this.id = d._id;
       this.firstname = d.firstname;
       this.lastname = d.lastname;
+      this.avatar_url = d.pic_url;
       if (d.type === "seller") {
         this.seller = true;
-        this.city = d.city;
         this.address = d.address;
         this.companyName = d.companyName;
       }
