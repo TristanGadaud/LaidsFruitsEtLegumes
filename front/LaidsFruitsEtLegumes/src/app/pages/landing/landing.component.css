@@ -23,6 +23,7 @@ input:focus-within {
 }
 .icon {
   display: inline-block;
+  margin-left: 250px;
 }
 .inp {
   display: inline;
@@ -40,6 +41,7 @@ button {
 }
 input[type="text"] {
   padding-left: 25px;
+  margin-left: 25px;
 }
 
 .titre {
@@ -48,4 +50,7 @@ input[type="text"] {
 }
 .wrapper {
   text-align: center;
+  display: flex;
+  grid-template-columns: 200px 200px 200px;
+
 }

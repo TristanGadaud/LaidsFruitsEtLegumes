@@ -3,14 +3,14 @@
     <img src="assets/titre.png" class="titre" alt="logo titre">
   </div>
   <div class="form">
-    <mat-card-actions class="icon">
-      <button mat-button (click)="submit()">
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-card-actions>
     <form class="inp" id="form" name="form" (submit)="submit()">
       <div class="wrapper">
-        <input type="text" class="inputText" name="search" autocomplete="off" placeholder="Carottes, pommes de terre..." [(ngModel)]="food">
+        <mat-card-actions class="icon">
+          <button mat-button (click)="submit()">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-card-actions>
+        <input type="text" class="inputText" name="search" autocomplete="off" placeholder="Carottes, bettraves..." [(ngModel)]="food">
         <input type="text" class="inputText" name="search" autocomplete="off" placeholder="Paris, Angoulême..." [(ngModel)]="localization">
         <input type="submit" style=" visibility: hidden;"/>
       </div>
