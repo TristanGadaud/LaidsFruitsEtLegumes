@@ -24,7 +24,9 @@
     </div>
     <div class="description">
       <div class="productTitle">
-        {{product.title}}
+        <a [routerLink]="'/product/' + product._id">
+          {{product.title}}
+        </a>
       </div>
       <div class="seller">
         <div class="firstNameProduct">

@@ -94,3 +94,7 @@ img {
 .avatar:hover {
   cursor: pointer;
 }
+.shopping {
+  text-align: center;
+  width: 60px;
+}

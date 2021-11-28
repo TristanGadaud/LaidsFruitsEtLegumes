@@ -1,0 +1,43 @@
+.wrapper {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  margin-top: 150px
+}
+
+.leftPannel, .rightPannel {
+  margin: 25px;
+  width: 100%;
+  height: 800px;
+}
+
+.productImage {
+  width: 400px;
+  height: auto;
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: underline saddlebrown;
+  color: black;
+}
+
+.font-size {
+  font-size: 25px
+}
+.title {
+  font-size: 45px;
+  margin-bottom: 25px;
+}
+.name {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.infos {
+  margin-top: 105px;
+}
+.mat-button {
+  background-color: saddlebrown;
+  margin-top: 40px;
+}

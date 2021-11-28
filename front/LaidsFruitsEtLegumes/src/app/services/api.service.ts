@@ -51,4 +51,7 @@ export class ApiService {
   searchProduct(title: string | null, location: string | null) {
     return this.http.get(this.apiBase + `api/product?title=${title}&location=${location}`, this.httpOptions)
   }
+  getProductById(id: any) {
+    return this.http.get(this.apiBase + `api/product?product_id=${id}`, this.httpOptions)
+  }
 }

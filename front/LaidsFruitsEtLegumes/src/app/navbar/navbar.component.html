@@ -9,6 +9,8 @@
   <a *ngIf="!logged" routerLink="/login" routerLinkActive="active" class="link">Se connecter</a>
   <a *ngIf="!logged" routerLink="/register" routerLinkActive="active" class="link">S'enregistrer</a>
   <a *ngIf="logged && url" (click)="getToProfile()"><img [src]="url" class="avatar" alt="avatar"></a>
+  <a *ngIf="logged && !seller" class="shopping"><mat-icon>shopping_cart</mat-icon></a>
+  <a *ngIf="logged && seller" routerLink="/new" routerLinkActive="active" class="link">Ajouter un produit</a>
   <a *ngIf="logged" (click)="logout()" routerLinkActive="active" class="link logout">Se déconnecter</a>
 </mat-toolbar>
 <div class="shadow"></div>

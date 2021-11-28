@@ -1,1 +1,23 @@
-<p>product works!</p>
+<div class="wrapper">
+  <div class="leftPannel">
+    <div>
+      <img [src]="pic_url" class="productImage" alt="image produit">
+    </div>
+  </div>
+  <div class="rightPannel">
+        <div class="infos">
+          <div class="name">
+            <a [routerLink]="'/profile/' + seller_id" class="underline">{{seller_firstname}} {{seller_lastname}}</a></div>
+          <div class="title">{{title}}</div>
+          <div class="description"><b>Description:</b> {{description}}</div>
+          <span class="price"><b>Prix:</b> {{price}}</span><span class="priceUnit"> € / kg</span>
+          <div class="quantity">
+            <span class="quantityText"><b>Unités restantes:</b> {{in_stock}}</span></div>
+          <mat-card-actions class="icon">
+            <button mat-button class="button">
+              Ajouter au panier
+            </button>
+          </mat-card-actions>
+        </div>
+    </div>
+</div>
